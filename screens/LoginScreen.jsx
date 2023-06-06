@@ -15,7 +15,7 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 
-function RegistrationScreen() {
+function LoginScreen() {
   let [fontsLoaded] = useFonts({
     Roboto_400Regular,
     Roboto_500Medium,
@@ -27,29 +27,21 @@ function RegistrationScreen() {
   }
   return (
     <View style={styles.formContainer}>
-      <Image style={styles.userPhoto}></Image>
-      <Text style={styles.title}>Registration</Text>
-      <View>
-        <TextInput
-          style={styles.input}
-          placeholder="Login"
-          textContentType="nickname"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Email address"
-          textContentType="emailAddress"
-        />
-        <TextInput
-          style={styles.input}
-          placeholder="Password"
-          textContentType="password"
-        />
-      </View>
+      <Text style={styles.title}>Log In</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Your Email"
+        textContentType="mail"
+      ></TextInput>
+      <TextInput
+        style={styles.input}
+        placeholder="Password"
+        textContentType="password"
+      ></TextInput>
       <TouchableOpacity activeOpacity={0.8} style={styles.btn}>
-        <Text style={styles.btnText}>Sign up</Text>
+        <Text style={styles.btnText}>Log In</Text>
       </TouchableOpacity>
-      <Text style={styles.text}>Already have an account? Log in</Text>
+      <Text style={styles.text}>Don't have an account?? Sign Up</Text>
     </View>
   );
 }
@@ -61,23 +53,14 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 25,
     paddingBottom: 50,
   },
-  userPhoto: {
-    position: "absolute",
-    alignSelf: "center",
-    top: -60,
-    width: 120,
-    height: 120,
-    backgroundColor: "#F6F6F6",
-    borderRadius: 16,
-  },
   title: {
     fontFamily: "Roboto_500Medium",
     fontSize: 30,
-    marginTop: 92,
+    marginTop: 30,
     marginBottom: 30,
     textAlign: "center",
+    color: "#212121",
   },
-
   input: {
     fontFamily: "Roboto_400Regular",
     fontSize: 16,
@@ -92,7 +75,7 @@ const styles = StyleSheet.create({
   },
   btn: {
     backgroundColor: "#FF6C00",
-    marginTop: 17,
+    marginTop: 16,
     marginBottom: 16,
     marginHorizontal: 16,
     paddingVertical: 16,
@@ -113,5 +96,4 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
-
-export default RegistrationScreen;
+export default LoginScreen;
