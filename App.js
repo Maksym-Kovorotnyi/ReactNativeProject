@@ -9,7 +9,7 @@ export default function App() {
         source={require("./assets/images/bcg.png")}
         style={styles.bcgImage}
       >
-        {/* <RegistrationScreen /> */}
+        <RegistrationScreen />
         <LoginScreen />
       </ImageBackground>
     </>
